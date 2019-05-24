@@ -7,6 +7,15 @@ class StaffsController < ApplicationController
     @staffs = Staff.alphabetize
   end
 
+  def create
+    @staff = Staff.new(staff_params)
+    if @staff.save
+      render :json=> @staff
+    else
+      render :new
+    end
+  end
+
   def show
     @staff = Staff.find(params[:id])
   end
@@ -20,11 +29,9 @@ class StaffsController < ApplicationController
     
   end
 
-
 private
 
   def staff_params
-    params.require(:staff).permit(:name)
+    params.require(:staff).permit(:name, :bio)
   end
-
 end

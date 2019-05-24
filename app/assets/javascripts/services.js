@@ -31,16 +31,16 @@ const attachClickHandler = () => {
             })
     })
 
-    $("#new_staff").on('submit', function (e) {
-        e.preventDefault()
+    $('#new_staff').on('submit', function(e) {
+        e.preventDefault();
         const serial = $(this).serialize()
-        $.post("/staffs", serial).done(function (data) {
+        $.post('/staffs', serial).done(function(data) {
             $('#show').html('')
-            $('#show').append(`<h2> New Staff: ${data.name}, Bio: ${data.bio}</h2>`)
-
+            $('#show').append(`<h2> New Staff: ${data.name},  Bio: ${data.bio} </h2>`)
         })
     })
 }
+
 class Service {
     constructor(service) {
         this.id = service.id
