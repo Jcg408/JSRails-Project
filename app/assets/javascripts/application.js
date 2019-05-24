@@ -12,5 +12,4 @@
 //
 //= require jquery
 //= require services
-//
 //= require_tree .

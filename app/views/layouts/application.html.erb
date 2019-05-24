@@ -9,10 +9,10 @@
     <%= javascript_include_tag 'application'%>
   </head>
   <header>
-      <%= link_to   "Meet the Staff", staffs_path, class:'btn' %>
-      <%=  link_to  "List of Services", services_path, class: 'btn'%> 
-      <%=  link_to  "Home Page", '/', class: 'btn'%>
-      <%= link_to  "Log Out", logout_path, method: :delete, class: 'btn' %>
+      <%= link_to   "Meet the Staff", staffs_path, class:'btn', id: 'staff'%>
+      <%=  link_to  "List of Services", services_path, class: 'btn', id: 'services' %> 
+      <%=  link_to  "Home Page", '/', class: 'btn', id: 'home'%>
+      <%= link_to  "Log Out", logout_path, method: :delete, class: 'btn', id: 'logout' %>
      
   </header>
 
@@ -23,13 +23,14 @@
       <h3> <%= msg %> </h3>
      <%end%>
     </div>
-    <div class = container>
+    <div class = container id='show'>
        <%= yield %>
     </div>
      
   </body>
 
   <footer>
+      <hr>
   Address: 123 Primrose Lane, Anywhere VA, 00000, Ph: 111-222-3333
   </footer>
 </html>

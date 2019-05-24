@@ -46891,3 +46891,182 @@ ActionView::Template::Error (require_tree argument must be a directory):
 app/assets/javascripts/cable.js:6
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2937823176040828907_70241339562880'
 Started POST "/__web_console/repl_sessions/3cf2b41523a50df501c4702c3a68085d/trace" for ::1 at 2019-05-24 12:53:59 -0400
+Started GET "/" for ::1 at 2019-05-24 13:19:43 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#home as HTML
+  Rendering sessions/home.html.erb within layouts/application
+  Rendered sessions/home.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 1249ms (Views: 1247.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:19:52 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (2.8ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.erb:4
+  Rendered services/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 183ms (Views: 55.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:22:11 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.erb:4
+  Rendered services/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 410ms (Views: 391.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:22:20 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.erb:4
+  Rendered services/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:33:35 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.7ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.erb:4
+  Rendered services/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 284ms (Views: 231.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 13:33:43 -0400
+Processing by SessionsController#home as HTML
+  Rendering sessions/home.html.erb within layouts/application
+  Rendered sessions/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 200ms (Views: 198.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:33:50 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.erb:4
+  Rendered services/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 74ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:35:39 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 277ms (Views: 262.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services.json" for ::1 at 2019-05-24 13:36:11 -0400
+Processing by ServicesController#index as JSON
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/controllers/services_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (41.3ms)
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `staff_services' for #<Service:0x00007fd138831b28>
+Did you mean?  staff_ids):
+  
+app/controllers/services_controller.rb:6:in `block (2 levels) in index'
+app/controllers/services_controller.rb:4:in `index'
+Started GET "/services.json" for ::1 at 2019-05-24 13:36:55 -0400
+Processing by ServicesController#index as JSON
+  [1m[36mService Load (14.0ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/controllers/services_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.48ms)
+Completed 200 OK in 90ms (Views: 43.2ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:37:11 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 245ms (Views: 191.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:37:16 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 13:40:50 -0400
+Processing by SessionsController#home as HTML
+  Rendering sessions/home.html.erb within layouts/application
+  Rendered sessions/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:40:53 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:44:44 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 389ms (Views: 372.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 13:44:52 -0400
+Processing by SessionsController#home as HTML
+  Rendering sessions/home.html.erb within layouts/application
+  Rendered sessions/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 408ms (Views: 406.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:44:57 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for ::1 at 2019-05-24 13:48:27 -0400
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 515ms (Views: 499.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-24 13:48:37 -0400
+Processing by SessionsController#home as HTML
+  Rendering sessions/home.html.erb within layouts/application
+  Rendered sessions/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 211ms (Views: 208.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services.json" for ::1 at 2019-05-24 13:48:40 -0400
+Processing by ServicesController#index as JSON
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/controllers/services_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.46ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/services/1.json" for ::1 at 2019-05-24 13:48:44 -0400
+Processing by ServicesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:12
+[active_model_serializers] Rendered ServiceSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 75ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/staffs" for ::1 at 2019-05-24 13:48:48 -0400
+Processing by StaffsController#index as HTML
+  Rendering staffs/index.html.erb within layouts/application
+  [1m[36mStaff Load (4.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."name" ASC[0m
+  ↳ app/views/staffs/index.html.erb:4
+  Rendered staffs/index.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 128ms (Views: 68.7ms | ActiveRecord: 5.6ms)
+
+

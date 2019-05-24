@@ -20,7 +20,6 @@ class StaffsController < ApplicationController
     
   end
 
-  
 
 private
 
