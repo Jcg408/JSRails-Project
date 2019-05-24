@@ -17,6 +17,8 @@ Fork and clone the repository, run bundle install, rake db:migrate, rake db:seed
 
 This project has been licensed under the MIT open source license.
 
+# May 2019 - This application is being modified to include some implementations of using a JS frontend to show use of AJAX and rendering with JSON.
+
 
 
 
