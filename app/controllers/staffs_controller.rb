@@ -5,6 +5,7 @@ class StaffsController < ApplicationController
 
   def index
     @staffs = Staff.alphabetize
+    render :json=> @staffs
   end
 
   def create
