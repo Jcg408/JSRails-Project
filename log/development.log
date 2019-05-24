@@ -46471,3 +46471,423 @@ Processing by ClientsController#show as HTML
 Completed 200 OK in 328ms (Views: 318.2ms | ActiveRecord: 4.4ms)
 
 
+  [1m[35m (18.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+Migrating to CreateStaffs (20190414163930)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "staffs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190414163930_create_staffs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190414163930"]]
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+Migrating to CreateClients (20190414163948)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "clients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190414163948_create_clients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190414163948"]]
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+Migrating to CreateAppointments (20190414165203)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "time" time, "service_id" integer, "staff_id" integer, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190414165203_create_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190414165203"]]
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+Migrating to CreateServices (20190414165411)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "services" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190414165411_create_services.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190414165411"]]
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+Migrating to CreateStaffServices (20190414165600)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "staff_services" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "service_id" integer, "staff_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190414165600_create_staff_services.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190414165600"]]
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+Migrating to AddColumnsToClients (20190423230216)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "clients" ADD "image" varchar[0m
+  ↳ db/migrate/20190423230216_add_columns_to_clients.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "clients" ADD "uid" varchar[0m
+  ↳ db/migrate/20190423230216_add_columns_to_clients.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190423230216"]]
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+Migrating to AddDescriptionToServices (20190520204912)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "services" ADD "description" text[0m
+  ↳ db/migrate/20190520204912_add_description_to_services.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190520204912"]]
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-24 11:51:54.471407"], ["updated_at", "2019-05-24 11:51:54.471407"]]
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mClient Exists (23.5ms)[0m  [1m[34mSELECT  1 AS one FROM "clients" WHERE "clients"."email" = ? LIMIT ?[0m  [["email", "clark@krypton.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mClient Create (0.8ms)[0m  [1m[32mINSERT INTO "clients" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Clark Kent"], ["email", "clark@krypton.com"], ["password_digest", "$2a$10$iTaczeaVwr8F6GQJ466HOOBiE/V4No.4miOVao82QGxVSVmWT0d4O"], ["created_at", "2019-05-24 11:52:18.395964"], ["updated_at", "2019-05-24 11:52:18.395964"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mClient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "clients" WHERE "clients"."email" = ? LIMIT ?[0m  [["email", "lois@dailyplanet.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mClient Create (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lois Lane"], ["email", "lois@dailyplanet.com"], ["password_digest", "$2a$10$y94zm1cdW3jtPYwXQikqPuFl9PeYeBo5ihm3634r9wxrqab.Qq7lu"], ["created_at", "2019-05-24 11:52:18.471872"], ["updated_at", "2019-05-24 11:52:18.471872"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mClient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "clients" WHERE "clients"."email" = ? LIMIT ?[0m  [["email", "bboop@talkartoon.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mClient Create (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Betty Boop"], ["email", "bboop@talkartoon.com"], ["password_digest", "$2a$10$PIfLTcrBpJz60QNCZbGJ0OTifL9OjUKdkIoAJ/LKJrJ0ao5/zF1T6"], ["created_at", "2019-05-24 11:52:18.546388"], ["updated_at", "2019-05-24 11:52:18.546388"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "clients" WHERE "clients"."email" = ? LIMIT ?[0m  [["email", "bugs@looneytunes.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mClient Create (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bugs Bunny"], ["email", "bugs@looneytunes.com"], ["password_digest", "$2a$10$YtgGlsvy77ZgsHJrf6evkeYzplHpNoYcFnCmx6kCrlUNH4GdeLoX."], ["created_at", "2019-05-24 11:52:18.622705"], ["updated_at", "2019-05-24 11:52:18.622705"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mClient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "clients" WHERE "clients"."email" = ? LIMIT ?[0m  [["email", "jess@rabbit.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mClient Create (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jessica Rabbit"], ["email", "jess@rabbit.com"], ["password_digest", "$2a$10$sTRPQJNz1.XqBV4Ja/1Zt.vCxZ6GxeIEmse9M3I0/jo3JDinO0hkW"], ["created_at", "2019-05-24 11:52:18.697960"], ["updated_at", "2019-05-24 11:52:18.697960"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mClient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "clients" WHERE "clients"."email" = ? LIMIT ?[0m  [["email", "sunnygirl@me.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mClient Create (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rebecca Sunnybrook"], ["email", "sunnygirl@me.com"], ["password_digest", "$2a$10$NP/3y4VZ7rkX18gAXzMxf.cVZCwCkioQHUPFdUHHXwoUI2iYq3HSi"], ["created_at", "2019-05-24 11:52:18.774054"], ["updated_at", "2019-05-24 11:52:18.774054"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mStaff Create (0.5ms)[0m  [1m[32mINSERT INTO "staffs" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Max"], ["bio", "Spa owner and master barber for 30 years"], ["created_at", "2019-05-24 11:52:18.794970"], ["updated_at", "2019-05-24 11:52:18.794970"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mStaff Create (0.3ms)[0m  [1m[32mINSERT INTO "staffs" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Roberto"], ["bio", "Hair Professional Artist, specializes in hair color formulation and application"], ["created_at", "2019-05-24 11:52:18.799247"], ["updated_at", "2019-05-24 11:52:18.799247"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mStaff Create (0.4ms)[0m  [1m[32mINSERT INTO "staffs" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lulabeth"], ["bio", "Lulabeth has 20 years experience in hair styling and cuts."], ["created_at", "2019-05-24 11:52:18.803357"], ["updated_at", "2019-05-24 11:52:18.803357"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mStaff Create (0.5ms)[0m  [1m[32mINSERT INTO "staffs" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jackson"], ["bio", "L Oreal professional colorist with an extensive modeling clientele."], ["created_at", "2019-05-24 11:52:18.808087"], ["updated_at", "2019-05-24 11:52:18.808087"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mStaff Create (0.4ms)[0m  [1m[32mINSERT INTO "staffs" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rebecca"], ["bio", "Rebecca is an award winning professional Nail Artist."], ["created_at", "2019-05-24 11:52:18.812553"], ["updated_at", "2019-05-24 11:52:18.812553"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mStaff Create (0.5ms)[0m  [1m[32mINSERT INTO "staffs" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lindsey"], ["bio", " Nail design and expert manicurist/pedicurist"], ["created_at", "2019-05-24 11:52:18.816371"], ["updated_at", "2019-05-24 11:52:18.816371"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mStaff Create (0.4ms)[0m  [1m[32mINSERT INTO "staffs" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Megan"], ["bio", " Hair stylist specializing in special occassions such as weddings, formal affairs"], ["created_at", "2019-05-24 11:52:18.820707"], ["updated_at", "2019-05-24 11:52:18.820707"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStaff Create (0.4ms)[0m  [1m[32mINSERT INTO "staffs" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jake"], ["bio", " Massage therapist, tanning specialist"], ["created_at", "2019-05-24 11:52:18.824687"], ["updated_at", "2019-05-24 11:52:18.824687"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mStaff Create (0.4ms)[0m  [1m[32mINSERT INTO "staffs" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Olga"], ["bio", "Esthetician, facials, massage therapy and aromatherapy"], ["created_at", "2019-05-24 11:52:18.829105"], ["updated_at", "2019-05-24 11:52:18.829105"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mService Create (0.5ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Barber"], ["created_at", "2019-05-24 11:52:18.847258"], ["updated_at", "2019-05-24 11:52:18.847258"], ["description", "Full service professional barber service includes traditional cuts as well as Fades, Undercuts, Pompadours, Quiffs, and others. Hot towel shaves, Beard trims, Mustache trims and Mustache waxing."]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mService Create (0.4ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Hair Color"], ["created_at", "2019-05-24 11:52:18.851758"], ["updated_at", "2019-05-24 11:52:18.851758"], ["description", "We use ammonia free hair color. Highlight techniques: foil, frosting, chunking and lowlights. We specialize in color correction. "]]
+  ↳ db/seeds.rb:26
+  [1m[35m (26.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mService Create (0.4ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Hair Cut"], ["created_at", "2019-05-24 11:52:18.881931"], ["updated_at", "2019-05-24 11:52:18.881931"], ["description", "Popular cuts include Lob Pixie, Jawline Bob, Curtain Bangs, Layered Wisp. Let us help you decide on a style that suits you. All hair types are welcome!"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mService Create (0.4ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Hair Style"], ["created_at", "2019-05-24 11:52:18.886513"], ["updated_at", "2019-05-24 11:52:18.886513"], ["description", "Special occassions require special attention to your appearance. Coiffure for weddings, proms, formal affairs, anniversaries, or just to try something different."]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mService Create (0.4ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Facial"], ["created_at", "2019-05-24 11:52:18.891451"], ["updated_at", "2019-05-24 11:52:18.891451"], ["description", "This purifying treatment consists of steaming, exfoliating, and an intense deeper cleaning of clogged pores. The skin is gently massaged, then a therapist selected mask is applied. Beneficial for all skin types."]]
+  ↳ db/seeds.rb:29
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mService Create (0.3ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Body Exfoliation"], ["created_at", "2019-05-24 11:52:18.895818"], ["updated_at", "2019-05-24 11:52:18.895818"], ["description", "Enjoy a body scrub with chamomile and gentle buffing grains that sweeps away dull surface cells, leaving even sensitive skin types feeling smooth, refreshed and hydrated."]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mService Create (0.3ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Full Body Massage"], ["created_at", "2019-05-24 11:52:18.899584"], ["updated_at", "2019-05-24 11:52:18.899584"], ["description", "A basic relaxing full body massage which may include a variety of massage strokes such as rolling, kneading, and percussion to help the body improve circulation"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mService Create (0.5ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Neck/Shoulder Massage"], ["created_at", "2019-05-24 11:52:18.903224"], ["updated_at", "2019-05-24 11:52:18.903224"], ["description", "A relaxing yet stimulating way to relieve the stress buildup. Warm essential oil rub and massage."]]
+  ↳ db/seeds.rb:32
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[36mService Create (0.3ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Nail Design"], ["created_at", "2019-05-24 11:52:18.906951"], ["updated_at", "2019-05-24 11:52:18.906951"], ["description", "Award winning nail designs include customized designs as well as Artist Choice. Innovative use of colors and materials to create a one-of-a-kind design."]]
+  ↳ db/seeds.rb:33
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[36mService Create (0.5ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Manicure"], ["created_at", "2019-05-24 11:52:18.910270"], ["updated_at", "2019-05-24 11:52:18.910270"], ["description", "Soak, scrub, hand massage and nail color included with all manicures. Basic manicure, dip powder, gel polish, full set tips"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mService Create (0.4ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Pedicure"], ["created_at", "2019-05-24 11:52:18.915787"], ["updated_at", "2019-05-24 11:52:18.915787"], ["description", "Soak, scrub, foot massage and nail color included with all pedicures. Antifungal treatment available with advance notice"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mService Create (0.4ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Waxing"], ["created_at", "2019-05-24 11:52:18.919933"], ["updated_at", "2019-05-24 11:52:18.919933"], ["description", "Professional waxing treatment that uses wax that is skin temperature and elastic, eliminating much of the pain associated with this procedure. "]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[36mService Create (0.3ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Tanning Bed"], ["created_at", "2019-05-24 11:52:18.924245"], ["updated_at", "2019-05-24 11:52:18.924245"], ["description", "Get a radiant, sun-kissed glow in our state of the art tanning facility. Tanning beds and stand-up equipment include amenities including high-pressure adjustable facial tanners and shoulder tanners. "]]
+  ↳ db/seeds.rb:37
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[36mService Create (0.4ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Tanning Spray"], ["created_at", "2019-05-24 11:52:18.928831"], ["updated_at", "2019-05-24 11:52:18.928831"], ["description", "VersaSpa Pro Sunless skin care system provides a Premium spray tanning experience with 3 spray nozzles for even coverage. Contains a unique blend of marine algae to moisturize, oxygenate and detoxify for skin rejuvenation. The open booth provides a warm environment with heated dry passes with each spray pass."]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[36mStaff Load (1.6ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mService Load (16.6ms)[0m  [1m[34mSELECT  "services".* FROM "services" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mClient Load (0.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mAppointment Load (25.4ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2019-05-24 12:45:37 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jessicagladstone/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#home as HTML
+  Rendering sessions/home.html.erb within layouts/application
+  Rendered sessions/home.html.erb within layouts/application (18.2ms)
+Completed 500 Internal Server Error in 6020ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /Users/jessicagladstone/JSRails-Project/app/assets/config
+  /Users/jessicagladstone/JSRails-Project/app/assets/images
+  /Users/jessicagladstone/JSRails-Project/app/assets/javascripts
+  /Users/jessicagladstone/JSRails-Project/app/assets/stylesheets
+  /Users/jessicagladstone/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/jessicagladstone/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /Users/jessicagladstone/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/jessicagladstone/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/jessicagladstone/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rails-ujs-0.1.0/dist
+  /Users/jessicagladstone/JSRails-Project/node_modules
+  /Users/jessicagladstone/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/popper_js-1.14.5/assets/javascripts
+  /Users/jessicagladstone/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/bootstrap-4.3.1/assets/stylesheets
+  /Users/jessicagladstone/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/bootstrap-4.3.1/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11:   <header>
+  
+app/assets/javascripts/application.js:14
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2937823176040828907_70241331508320'
+Started GET "/" for ::1 at 2019-05-24 12:47:30 -0400
+Processing by SessionsController#home as HTML
+  Rendering sessions/home.html.erb within layouts/application
+  Rendered sessions/home.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 2354ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all'%>
+     9:     <%= javascript_include_tag 'application'%>
+    10:   </head>
+    11:   <header>
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2937823176040828907_70241372442840'
+Started GET "/favicon.ico" for ::1 at 2019-05-24 12:47:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-24 12:49:14 -0400
+Processing by SessionsController#home as HTML
+  Rendering sessions/home.html.erb within layouts/application
+  Rendered sessions/home.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all'%>
+     9:     <%= javascript_include_tag 'application'%>
+    10:   </head>
+    11:   <header>
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2937823176040828907_70241358267680'
+Started POST "/__web_console/repl_sessions/33db591bea1ab40d333aede59a9b2319/trace" for ::1 at 2019-05-24 12:49:36 -0400
+Started POST "/__web_console/repl_sessions/33db591bea1ab40d333aede59a9b2319/trace" for ::1 at 2019-05-24 12:49:46 -0400
+Started GET "/" for ::1 at 2019-05-24 12:50:43 -0400
+Processing by SessionsController#home as HTML
+  Rendering sessions/home.html.erb within layouts/application
+  Rendered sessions/home.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all'%>
+     9:     <%= javascript_include_tag 'application'%>
+    10:   </head>
+    11:   <header>
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2937823176040828907_70241337000240'
+Started GET "/" for ::1 at 2019-05-24 12:53:38 -0400
+Processing by SessionsController#home as HTML
+  Rendering sessions/home.html.erb within layouts/application
+  Rendered sessions/home.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all'%>
+     9:     <%= javascript_include_tag 'application'%>
+    10:   </head>
+    11:   <header>
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2937823176040828907_70241339562880'
+Started POST "/__web_console/repl_sessions/3cf2b41523a50df501c4702c3a68085d/trace" for ::1 at 2019-05-24 12:53:59 -0400

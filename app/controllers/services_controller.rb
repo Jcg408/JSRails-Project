@@ -1,28 +1,21 @@
 class ServicesController < ApplicationController
     def index
         @services = Service.all
-    end
-    
-    def new
-        @service = Service.new
-    end
-    
-    def create
-        @service = Service.new(service_params)
-        if @service.save
-            redirect_to services_path
-        else
-            redirect_to '/'
+        respond_to do |f|
+            f.html
+            f.json{render :json => @services}
         end
     end
+   
 
     def show
         @service = Service.find(params[:id])
+        render :json => @service
     end
    
     private
 
     def service_params
-        params.require(:service).permit(:name)
+        params.require(:service).permit(:name, :description)
     end
 end
