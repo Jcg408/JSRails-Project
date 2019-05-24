@@ -1,0 +1,30 @@
+<h1>Staff Admin</h1>
+
+ 
+
+<h2>Appointments Booked</h2> 
+   <ul>
+      
+      <% @booked.each do |appt|%>
+         <p> Client: <%= appt[0]%> </p>
+         <p> Date: <%= appt[1] %> </p> <br>
+      </li>
+      
+      <%end%>
+   </ul>
+
+   <h2>Most Popular</h2>
+      <% @most_popular.each do |person| %>
+         <h2> <%= person.name %>   Appointments: <%= person.appointments.count%></h2>
+         <%end%>
+    
+ 
+   
+   
+   
+
+
+   
+
+
+

@@ -1,0 +1,21 @@
+<div class='container'>
+<h1>Welcome <%= @client.name %> </h1>
+<p>Your Current Appointments </p>
+    <ul>
+        <% @client.appointments.each do |appt|%>
+      <p><%= link_to  "Edit", edit_appointment_path(appt) %> <p> 
+        <li>
+            <p> Date: <%= appt.date%></p>
+            <p> Time: <%= appt.time%></p>    
+            <p>Service: <%= appt.service.name %></p>
+            <p>Staff: <%= appt.staff.name%> </p>
+        </li><br>
+       
+        <%end%>
+    </ul>
+</div>
+
+<%= link_to  "Book an Appointment", new_service_appointment_path(@client), class: 'btn'%> <br>
+
+
+
