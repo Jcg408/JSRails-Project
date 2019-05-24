@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/auth/facebook/callback' => 'sessions#omniauth_create'
 
  resources :clients, except: [:edit, :update, :destroy]
- resources :staffs, only: [:index, :show]
+ resources :staffs
  resources :appointments, only: [:create, :edit, :update]
 
  # nested resource appointments new, index, show, destroy
