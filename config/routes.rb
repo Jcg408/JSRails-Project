@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  delete '/logout' => 'sessions#destroy'
+  get '/logout' => 'sessions#destroy'
   
   # route added for staff admin scope methods - eventually will build out staff and admin section.
   get '/admin' => 'staffs#admin'

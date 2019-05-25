@@ -1,8 +1,9 @@
 # README
 
 README
-Overview - Rails Project/Flatiron School/ J. Gladstone
+Overview - JS with Rails Project/Flatiron School/ J. Gladstone
 
+The project is a modification of the previous Rails Backend Project. This project implements the use of JavaScript as a Frontend API component. Specifications can be found in the spec.md file.
 
 The application is for a Luxury Day Spa which allows clients to sign up and book appointments with staff members for certain services.
 

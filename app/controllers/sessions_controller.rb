@@ -32,6 +32,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    binding.pry
     session.clear
     flash[:notice] = 'Log Out Successful'
     redirect_to '/'
