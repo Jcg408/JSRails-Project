@@ -9,11 +9,11 @@
     <%= javascript_include_tag 'application'%>
   </head>
   <header>
-      <%= link_to   "Meet the Staff", staffs_path, class:'btn', id: 'staff'%>
+      <%= link_to   "Meet the Staff", meet_path, class:'btn', id: 'staff'%>
       <%=  link_to  "List of Services", services_path, class: 'btn', id: 'services' %> 
       <%=  link_to  "Home Page", '/', class: 'btn', id: 'home'%>
       <%= link_to  "Log Out", logout_path, method: :delete, class: 'btn', id: 'logout' %>
-     
+      <%= link_to   "Admin", admin_path, class:'btn', id: 'admin'%>
   </header>
 
   <body>

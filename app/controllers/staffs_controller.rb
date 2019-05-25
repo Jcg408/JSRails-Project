@@ -17,6 +17,10 @@ class StaffsController < ApplicationController
     end
   end
 
+  def meet
+    @staffs = Staff.all
+  end
+
   def show
     @staff = Staff.find(params[:id])
   end

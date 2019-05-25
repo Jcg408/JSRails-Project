@@ -12,14 +12,11 @@ const addEventHandler = () => {
     })
     $('#appts').on('click', function(e) {
         e.preventDefault();
-        console.log(this)
         $.get('/staffs')
         .success(function(json) {
-            const $ol = $('.staffAppt')
-            $ol.html('')
-            console.log($ol)
             json.forEach(function(staff) {
-                $ol.append(`<li> ${staff.name} - ${staff.appointments}</li>`)
+                $('.staffAppt').append(`<li> ${staff.name} - ${staff.appointments}</li>`)
+             console.log(staff)
             })
         })
           
