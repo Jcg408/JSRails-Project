@@ -1,3 +1,22 @@
 // Place all the styles related to the staffs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#staff_name {
+    margin: 20px;
+    width: 280px;
+    height: 30px;
+}
+
+#staff_bio {
+    width: 320px;
+    height: 50px;
+    border-radius: 8px;
+    border-color: white;
+    margin: 20px 0 0 ;
+}
+
+input[type="submit" i] {
+    margin: 20px;
+}

@@ -86,9 +86,17 @@ label {
   font-size: 1.2em;
 }
 
+hr {
+  margin: 10px auto;
+  float: center;
+  width: 500px;
+  border: 0;
+  background-color: #fff;
+  border-top: 1px dashed #380252;
+
+  
+}
 footer {
-  
-  
   padding-top: 50px;
   text-align: center;
   font-style: italic;
