@@ -1,6 +1,7 @@
 $(function () {
     addEventHandler();
 })
+
 const addEventHandler = () => {
     $('#new_staff').on('submit', function (e) {
         e.preventDefault();
@@ -26,7 +27,6 @@ const addEventHandler = () => {
                     })
                 })
             })
-
     })
 
 }

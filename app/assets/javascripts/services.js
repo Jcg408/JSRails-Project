@@ -30,8 +30,6 @@ const attachClickHandler = () => {
                 $('#show').append(serviceHTML)
             })
     })
-
-    
 }
 
 class Service {

@@ -6,7 +6,6 @@ class ServicesController < ApplicationController
             f.json{render :json => @services}
         end
     end
-   
 
     def show
         @service = Service.find(params[:id])
